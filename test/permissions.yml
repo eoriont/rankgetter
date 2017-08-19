@@ -1,0 +1,411 @@
+groups:
+  default:
+    options:
+      default: true
+  neophyte:
+    options:
+      prefix: '&7&l[Neophyte]&r '
+    permissions:
+    - plots.use
+    - plots.plot.1
+    - plots.permpack.basic
+    - plots.permpack.basicflags
+    - plots.permpack.basicinbox
+    - multiverse.portal.access.p2o
+    - multiverse.portal.access.p2o2
+    - multiverse.portal.access.o2p
+    - multiverse.portal.access.c2o
+    - multiverse.portal.access.o2c
+  hacker:
+    options:
+      prefix: '&a&l[Hacker]&r '
+    inheritance:
+    - neophyte
+    permissions:
+    - shadowninjakenji
+  coder:
+    options:
+      prefix: '&6&l[Coder]&r '
+    inheritance:
+    - hacker
+    permissions:
+    - worldguard.region.addmember
+    - worldguard.region.removemember
+  developer:
+    options:
+      prefix: '&b&l[Developer]&r&4 '
+    inheritance:
+    - coder
+  instructor:
+    options:
+      prefix: '&e&l[Instructor]&r '
+    inheritance:
+    - developer
+    permissions:
+    - -'*'
+  visitor:
+    options:
+      prefix: '&d&l[Visitor]&r '
+    inheritance:
+    - neophyte
+  mvcc:
+    options:
+      prefix: '&2&l[MVCC]&r '
+    inheritance:
+    - coder
+  MV:
+    options:
+      suffix: ' &f&l[MV]&r '
+  GB:
+    options:
+      suffix: ' &f&l[GB]&r '
+  SF:
+    options:
+      suffix: ' &f&l[SF]&r '
+  RC:
+    options:
+      suffix: ' &f&l[RC]&r '
+  AL:
+    options:
+      suffix: ' &f&l[AL]&r '
+schema-version: 1
+users:
+  a79b2e69-3a32-4363-b281-ddf456b03e91:
+    permissions:
+    - '*'
+    group:
+    - developer
+    - MV
+    options:
+      name: oriont
+  5d25c589-a50f-4097-9e5c-e73090fe8f1f:
+    options:
+      name: code_dad
+    group:
+    - developer
+    - MV
+  b2bce426-4f6e-4437-a0c1-b14254067117:
+    options:
+      name: epicwinter211
+    group:
+    - hacker
+    - MV
+    permissions: []
+  01d51af3-b9ad-4ec4-a8de-ef70bf4bc556:
+    options:
+      name: chuckboomer395
+    group:
+    - hacker
+    - MV
+  f9ec794e-705f-4253-b89d-ad0181fc6ae7:
+    options:
+      name: xXYoloFaceXx
+    group:
+    - coder
+    - MV
+  247c7fd6-f76c-4237-b6ed-4a3187738601:
+    options:
+      name: mvcodeclub2
+    group:
+    - mvcc
+    - NONE
+  0810e01f-d312-474b-a4a1-cbb51665184f:
+    options:
+      name: GetWrecked208
+    group:
+    - coder
+    - MV
+  285c1094-16f3-4f9a-b285-43b8fbd377af:
+    options:
+      name: xXRichCherrXx
+    group:
+    - hacker
+    - MV
+  7a2bcff1-666f-48be-84e1-5da7575da99d:
+    options:
+      name: xXVilleDaKilleXx
+    group:
+    - coder
+    - MV
+  47700b24-eeef-46e4-86d4-5ecb9b433ba7:
+    options:
+      name: hbrown92
+    group:
+    - hacker
+    - MV
+  8bb060f2-be3c-45b9-9a55-a5589d7f5b48:
+    options:
+      name: mvcodeclub1
+    group:
+    - developer
+    - MV
+  64695670-bc20-47d3-a24f-a8d6e200f865:
+    options:
+      name: tristrammoult
+    group:
+    - hacker
+    - MV
+  3f592b4c-69c6-4b86-8cd2-28e5843d8168:
+    options:
+      name: CBlockSurprise
+    group:
+    - coder
+    - MV
+  2277b493-b558-47f9-a189-73c36fbd9d58:
+    options:
+      name: owenstamo
+    group:
+    - developer
+    - RC
+  634d7b9c-08dd-4978-81fc-5ef477f23fda:
+    options:
+      name: Thorpedo91
+    group:
+    - instructor
+    - RC
+  f5e6c691-a34c-4e54-8fc4-daa95656a53a:
+    options:
+      name: BoomPax
+    group:
+    - hacker
+    - MV
+  dcf37a84-70bc-4e9f-b119-4014749248a9:
+    options:
+      name: WhaleDin
+    group:
+    - instructor
+    - MV
+  6d408f2e-e696-4ce1-b271-238112362529:
+    options:
+      name: infamousmodo
+    group:
+    - instructor
+    - GB
+  155f0ad1-2234-4c8f-8c5d-294199034439:
+    options:
+      name: King_Blockster
+    group:
+    - hacker
+    - GB
+  fbb5923e-944f-4c87-b55f-69ebdc1200b9:
+    options:
+      name: PiperKim
+    group:
+    - hacker
+    - GB
+  1085f643-c86a-4694-98b7-2aa58a28d92d:
+    options:
+      name: Chingy
+    group:
+    - hacker
+    - GB
+  2d36df64-03ff-402c-b87e-e8d20da6e27c:
+    options:
+      name: God_Of_Pigs
+    group:
+    - hacker
+    - GB
+  2a6631d3-d40a-4d94-8d88-3b70327b45e0:
+    options:
+      name: TforTrevor
+    group:
+    - hacker
+    - SF
+  80139f9e-b99e-4733-9905-ca04f2b4f37b:
+    options:
+      name: Michael90
+    group:
+    - developer
+    - SF
+  277e2cae-000c-49ed-9cc3-d105d207168c:
+    options:
+      name: iSinqAlone
+    group:
+    - developer
+    - SF
+  b3818e27-9f93-427f-8f53-1fbf2ed2b78d:
+    options:
+      name: Balloonbuster7
+    group:
+    - hacker
+    - SF
+  27d54c5c-0e6b-4d07-b74a-05614dea4e80:
+    options:
+      name: jet_black_dragon
+    group:
+    - hacker
+    - GB
+  b150219c-59d3-4ad3-8df3-e98bb89c3c35:
+    options:
+      name: GodbossJesse
+    group:
+    - hacker
+    - SF
+  21f13ca3-f1f3-4b37-90cb-075c74d48eaa:
+    options:
+      name: MojangMonster
+    group:
+    - hacker
+    - SF
+  c7adb546-2034-4c24-9b6d-14d807bfbb6f:
+    options:
+      name: Tranced7
+    group:
+    - instructor
+    - SF
+  c313cadb-5237-4333-9ddf-c1a5df2de44b:
+    options:
+      name: FlyOG
+    group:
+    - developer
+    - SF
+  79fbdbdb-6232-4c0f-97ed-e8cc71cde53b:
+    options:
+      name: CheesyLandon
+    group:
+    - hacker
+    - SF
+  618f3075-ff36-4202-ba8f-2a19149ac619:
+    options:
+      name: willpower2005
+    group:
+    - developer
+    - SF
+  759bef32-da68-4de3-9832-e51bf6902620:
+    options:
+      name: Rainbowsheep_22
+    group:
+    - developer
+    - SF
+  cc0b005e-386c-4c53-a7fb-3afa5faca0df:
+    options:
+      name: VampireKid21
+    group:
+    - coder
+    - SF
+  78a52b30-9c7b-470a-8e84-c73367f9b580:
+    options:
+      name: Aniki219
+    group:
+    - instructor
+    - GB
+  de1db058-9daf-4c20-9c92-0ee725d042fc:
+    options:
+      name: theJoFamily
+    group:
+    - hacker
+    - SF
+  7b8adb0c-cbb5-4b69-998e-92a680e26a81:
+    options:
+      name: shadowninjakenji
+    permissions:
+    - hacker
+    - text
+  87220539-92ea-4aac-97fc-d5a6a039d02f:
+    options:
+      name: shine9080
+  58fe6552-cd3c-4b3b-90e5-8f4be9d7a79e:
+    options:
+      name: JMCgamer1011
+  e5765a9e-0157-4e36-8644-9288179d0f35:
+    options:
+      name: Warrior0120
+    group:
+    - hacker
+    - GB
+  d44b85df-ee1c-4d34-84f5-fd05bc7e8412:
+    options:
+      name: HowOriginal728
+    group:
+    - instructor
+    - SF
+  91d2bbe0-42a7-49a4-8737-e73c02866dbb:
+    options:
+      name: _RoastyToasty_
+    group:
+    - hacker
+    - SF
+  081097a5-e528-4949-a0b3-12849d82e2d5:
+    options:
+      name: mvcodeclub4
+    group:
+    - mvcc
+    - NONE
+  bf32df34-3678-4d3e-a437-1501e38c5fdc:
+    options:
+      name: xXRAM1FXx
+    group:
+    - instructor
+    - RC
+  c1ad6247-71b0-49e6-bf13-3a9d0da277e2:
+    options:
+      name: Boydingo
+    group:
+    - hacker
+    - SF
+  a5f757fd-c472-4404-9be5-ee145732908e:
+    options:
+      name: dawingedbobcat
+    group:
+    - hacker
+    - SF
+  a80b636e-5e86-42d2-8b72-aaf0009227c3:
+    options:
+      name: SweetHumming
+    group:
+    - visitor
+    - NONE
+  b69f5ebd-69c9-450a-88aa-85bd6fc669e9:
+    options:
+      name: Dax22
+    group:
+    - neophyte
+    - MV
+  317ad085-1e7f-45c3-b997-ef2da66c36a4:
+    options:
+      name: BP18
+    group:
+    - neophyte
+    - MV
+  886d5ea6-db3b-4cf3-bdc3-4a528a2007b3:
+    options:
+      name: mvcodeclub3
+    group:
+    - mvcc
+    - NONE
+  941d9548-a0d5-4744-b7b7-662ec0cfbfa6:
+    options:
+      name: SavagePandas
+    group:
+    - coder
+    - MV
+  a29867a9-937d-4d29-8c45-83c566bb9e17:
+    options:
+      name: beepi
+    group:
+    - developer
+    - MV
+  e392113a-c13d-4b16-8912-51485c30c60d:
+    options:
+      name: mastari
+    group:
+    - visitor
+    - NONE
+  0f5c687c-4500-475c-bb7a-ef6d01cff0ca:
+    options:
+      name: PlasmaMC_00
+    group:
+    - hacker
+    - NONE
+  1d62d59f-e038-4ad2-ab5b-42df25f4f470:
+    options:
+      name: Gold440
+    group:
+    - developer
+    - MV
+  e431c8e8-4f5d-46a0-b2a9-90c92302cf4f:
+    options:
+      name: Demondeath
+    group:
+    - mvcc
+    - NONE
