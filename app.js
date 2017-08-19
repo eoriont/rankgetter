@@ -11,7 +11,7 @@ function parse(path, ymlpath) {
         if (!isThere) {
             
             mcauth.getMojangProfile(o.minecraft_username, function(profile) {
-                    console.log(profile); 
+                console.log(profile); 
             });
         }
     })
