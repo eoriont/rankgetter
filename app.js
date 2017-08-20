@@ -41,5 +41,6 @@ function check(username, list) {
 
 let ranksLink = "https://www.mvcodeclub.com/students/ranks";
 let permissionsFile = "~/server/plugins/PermissionsEx/permissions.yml";
-parse(ranksLink, permissionsFile);
+let permissionsFile2 = __dirname + "/permissions.yml"
+parse(ranksLink, permissionsFile2);
 
