@@ -1,5 +1,5 @@
 var fs = require('fs');
-let yaml = require('js-yaml');
+var yaml = require('js-yaml');
 var mojang = require('mojang');
 var request = require('request-promise');
 
