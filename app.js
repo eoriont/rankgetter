@@ -40,7 +40,7 @@ function check(username, list) {
 }
 
 let ranksLink = "https://www.mvcodeclub.com/students/ranks";
-let permissionsFile = "/../server/plugins/PermissionsEx/permissions.yml";
+let permissionsFile = __dirname + "/../server/plugins/PermissionsEx/permissions.yml";
 let permissionsFile2 = __dirname + "/../permissions/permissions.yml";
-parse(ranksLink, permissionsFile2);
+parse(ranksLink, permissionsFile);
 
