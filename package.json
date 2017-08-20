@@ -12,6 +12,9 @@
     "fs": "0.0.1-security",
     "js-yaml": "^3.9.1",
     "mcauth": "^0.2.2",
-    "node-uuid": "^1.4.8"
+    "mojang": "^0.4.1",
+    "node-uuid": "^1.4.8",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
   }
 }

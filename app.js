@@ -1,27 +1,45 @@
 var fs = require('fs');
 let yaml = require('js-yaml');
-var mcauth = require("mcauth");
+var mojang = require('mojang');
+var request = require('request-promise');
 
-function parse(path, ymlpath) {
-    let  yml = yaml.safeLoad(fs.readFileSync(ymlpath, 'utf8').toString());
-    let json = JSON.parse(fs.readFileSync(path, 'utf8').toString());
+async function parse(path, ymlpath) {
+    let url = await request(path);
+    let yml = yaml.safeLoad(fs.readFileSync(ymlpath, 'utf8').toString());
+    let json = JSON.parse(url);
     let list = Object.values(yml.users);
-    json.forEach((o) => {
-        let isThere = check(o.minecraft_username, list) != null;
+    for (let j = 0; j < json.length; j++) {
+        let o = json[j];
+        let name = o.minecraft_username
+        let isThere = check(name, list) != null;
         if (!isThere) {
-            
-            mcauth.getMojangProfile(o.minecraft_username, function(profile) {
-                console.log(profile); 
-            });
+            let i = await mojang.username(name)
+            let uuid = i.id;
+            yml.users[uuid] = {options: {name}, group: [o.rank, convertLocation(o.location)]};
         }
-    })
-    //console.log(check("oriont", list));
-    
+    }
+
+    console.log(yaml.safeDump(yml));
+    fs.writeFileSync(ymlpath, yaml.safeDump(yml));
+}
+
+function convertLocation(loc) {
+    let newloc;
+
+    if (loc == "mill-valley") {
+        newloc = "MV"
+    } else {
+        newloc = "NONE";
+    }
+
+    return newloc;
 }
 
 function check(username, list) {
     return list.find(o => o.options.name == username);
 }
 
-parse(__dirname + "/test/ranks-latest.json", __dirname + "/test/permissions.yml");
+let ranksLink = "https://www.mvcodeclub.com/students/ranks";
+let permissionsFile = "~/server/plugins/PermissionsEx/permissions.yml";
+parse(ranksLink, permissionsFile);
 
