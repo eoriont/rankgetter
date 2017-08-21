@@ -60,5 +60,5 @@ let ranksLink = "https://www.mvcodeclub.com/students/ranks";
 let permissionsFile = "/home/mc/server/plugins/PermissionsEx/permissions.yml";
 let permissionsFile2 = __dirname+"/test.txt";
 console.log(__dirname);
-parse(ranksLink, permissionsFile2);
+parse(ranksLink, permissionsFile);
 
