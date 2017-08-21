@@ -11,12 +11,21 @@ async function parse(path, ymlpath) {
     for (let j = 0; j < json.length; j++) {
         let o = json[j];
         let name = o.minecraft_username
-        let isThere = check(name, list) != null;
-        if (!isThere) {
-            let i = await mojang.username(name)
-            let uuid = i.id;
-            yml.users[uuid] = {options: {name}, group: [o.rank, convertLocation(o.location)]};
+        let user = check(name, list);
+        let i = await mojang.username(name)
+        let uuid = i.id;
+        let group = [o.rank, convertLocation(o.location)];
+        if (!isThere(user)) {
+            yml.users[uuid] = {options: {name}, group};
+            continue;
         }
+        
+        let has = hasRanks(user, group);
+    
+        if (!has) {
+            yml.users[uuid] = {options: {name}, group};
+        }
+        
     }
 
     console.log(yaml.safeDump(yml));
@@ -39,9 +48,17 @@ function check(username, list) {
     return list.find(o => o.options.name == username);
 }
 
+function hasRanks(user, ranks) {
+    return user.group == ranks;
+}
+
+function isThere (thing) {
+    return thing != null;
+}
+
 let ranksLink = "https://www.mvcodeclub.com/students/ranks";
 let permissionsFile = "/home/mc/server/plugins/PermissionsEx/permissions.yml";
-let permissionsFile2 = "/mnt/c/Users/oriont/Desktop/permissions/permissions.yml"; //__dirname+"/test.txt";
+let permissionsFile2 = __dirname+"/test.txt";
 console.log(__dirname);
-parse(ranksLink, permissionsFile);
+parse(ranksLink, permissionsFile2);
 
